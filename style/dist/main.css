@@ -1,0 +1,112 @@
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  background-color: #F5F5F5;
+}
+
+h1, h2 {
+  font-family: "Gothic A1", sans-serif;
+}
+
+button {
+  border: 0;
+  background-color: #EF6C00;
+  border-radius: 8px;
+  padding: 12px;
+  color: white;
+  font-size: 1.2em;
+  font-family: "Gothic A1", sans-serif;
+  margin-right: 10px;
+  box-shadow: 1px 2px 5px rgba(1, 1, 1, 0.2);
+  transition: 300ms ease background-color;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #bc5500;
+}
+
+.github {
+  background-color: #F5F5F5;
+  color: black;
+}
+.github:hover {
+  background-color: gainsboro;
+}
+
+main {
+  padding-top: 60px;
+  color: white;
+  background-color: #212121;
+}
+
+header {
+  margin-bottom: 50px;
+}
+header h1 {
+  font-size: 3em;
+  margin-bottom: 0;
+  font-weight: 600;
+}
+header h3 {
+  font-size: 1.6em;
+  font-weight: 300;
+  margin-top: 5px;
+}
+
+.pane {
+  padding: 0 50px;
+}
+
+.content {
+  width: 100%;
+  padding: 20px 40px 80px 40px;
+  max-width: 900px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.features {
+  padding: 20px 40px 20px 0;
+  background-color: #F5F5F5;
+}
+.features ul {
+  width: 100%;
+  padding-left: 20px;
+  list-style: none;
+  box-sizing: border-box;
+}
+.features li {
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+.preview-image {
+  width: 600px;
+  height: auto;
+}
+
+/* preview */
+.preview {
+  font-family: "Hack", monospace, Consolas;
+  font-size: 1.2em;
+  line-height: 10px;
+  background-color: #2e2e2e;
+  padding: 10px 20px 3px 20px;
+  border-radius: 7px;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4) inset;
+}
+.preview .input {
+  color: mediumseagreen;
+}
+.preview .output {
+  padding-bottom: 10px;
+}
+.preview .op {
+  color: darkorange;
+}
+.preview .var {
+  color: cornflowerblue;
+}

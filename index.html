@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kalk</title>
+    <link rel="stylesheet" href="style/dist/main.css">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack-subset.css">
+</head>
+
+<body>
+    <main class="pane">
+        <div class="content">
+            <header>
+                <h1>kalk</h1>
+                <h3>A command line calculator that supports user-defined variables, functions, and to some extent units.
+                </h3>
+                <form>
+                    <button class="github" formaction="https://github.com/PaddiM8/kalk">GitHub Repo</button>
+                    <button formaction="https://github.com/PaddiM8/kalk/releases/latest">Download</button>
+                </form>
+            </header>
+
+            <div class="preview">
+                <p><span class="input">&gt;&gt;</span> <span class="var">f</span>(<span class="var">x</span>, <span
+                        class="var">y</span>) <span class="op">=</span> <span class="var">Σ</span>(1, 3, (2<span
+                        class="var">sin</span>4/<span class="var">x</span>!)^<span class="var">y</span> <span
+                        class="op">%</span>
+                    <span class="var">n</span>) <span class="op">+</span> <span class="var">cos</span>(60<span
+                        class="op">°</span>)
+                </p>
+                <p><span class="input">&gt;&gt;</span> <span class="var">a</span> <span class="op">=</span> 3</p>
+                <p><span class="input">&gt;&gt;</span> <span class="var">f</span>(<span class="var">a</span>, 2) <span
+                        class="op">/</span> 8</p>
+                <p class="output">0.0863645842</p>
+                <p><span class="input">&gt;&gt;</span> <span class="var">Γ</span>(⌊3<span class="var">π</span><span
+                        class="op">+</span>2⌋ <span class="op">+</span> <span class="var">√</span>2)</p>
+                <p class="output">1.1060309421365242*10^8</p>
+            </div>
+        </div>
+    </main>
+    <section class="features pane">
+        <div class="content">
+            <h2>Features</h2>
+            <ul>
+                <li>Operators: +, -, *, /, !, %</li>
+                <li>Groups: (), ⌈⌉, ⌋⌊</li>
+                <li>Pre-defined functions and constants</li>
+                <li>User-defined functions and variables</li>
+                <li>User-defined units (experimental)</li>
+                <li>Understands fairly ambiguous syntax. Eg. 2sin50 + 2xy</li>
+                <li>Syntax highlighting</li>
+                <li>Completion for special symbols on tab</li>
+                <li>Sum functions</li>
+                <li>Load a file including predefined functions and constants</li>
+            </ul>
+        </div>
+    </section>
+</body>
+
+</html>
