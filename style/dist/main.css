@@ -34,6 +34,10 @@ hr {
   margin-top: 15px;
 }
 
+li {
+  line-height: 1.3;
+}
+
 .logo {
   font-size: 3em;
   margin-bottom: 0;
@@ -50,6 +54,7 @@ hr {
   text-decoration: none;
   padding: 12px;
   margin-right: 10px;
+  margin-bottom: 10px;
   border-radius: 8px;
   box-shadow: 1px 2px 5px rgba(1, 1, 1, 0.2);
   transition: 200ms ease background-color;
@@ -166,6 +171,7 @@ footer a {
 code {
   background-color: #E0E0E0;
   border-radius: 7px;
+  white-space: nowrap;
   font-family: "Hack", monospace, Consolas;
   font-size: 0.8em;
   padding: 5px 9px;
@@ -181,11 +187,14 @@ code {
 .preview {
   font-family: "Hack", monospace, Consolas;
   font-size: 1.2em;
-  line-height: 10px;
   background-color: #2e2e2e;
   padding: 10px 20px 3px 20px;
   border-radius: 7px;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4) inset;
+}
+.preview p {
+  margin-top: 6px;
+  margin-bottom: 6px;
 }
 .preview .input {
   color: mediumseagreen;
