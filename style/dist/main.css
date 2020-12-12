@@ -5,6 +5,7 @@ body {
   padding: 0;
   font-family: "Inter", sans-serif;
   background-color: #F5F5F5;
+  color: black;
 }
 
 h1, h2 {
@@ -39,9 +40,22 @@ li {
 }
 
 .logo {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+.logo img {
+  width: 58px;
+  height: auto;
+  margin-right: 15px;
+  image-rendering: crisp-edges;
+}
+.logo h1 {
   font-size: 3em;
-  margin-bottom: 0;
   font-weight: 600;
+  margin-bottom: auto;
+  margin-top: auto;
+  padding-top: 2px;
 }
 
 .button {
