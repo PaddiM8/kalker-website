@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build": "mkdir -p dist; sass style/main.sass:dist/main.css; cp -r ./node_modules/@paddim8/kalk-component/public/build/* dist/",
+    "build": "gulp",
     "serve": "wasm-server"
   },
   "repository": {
@@ -20,6 +20,11 @@
     "@paddim8/kalk-component": "^1.0.1"
   },
   "devDependencies": {
+    "esm": "^3.2.25",
+    "gulp": "^4.0.2",
+    "gulp-inline-source-html": "^1.0.3",
+    "gulp-sass": "^4.1.0",
+    "node-sass": "^5.0.0",
     "sass": "^1.32.0",
     "wasm-server": "^0.0.4"
   }

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kalk</title>
+    <link rel="stylesheet" href="dist/main.css">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack-subset.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <script src="dist/bundle.js"></script>
+</head>
+
+<body>
+    <main class="pane">
+        <div class="content">
+            <header>
+                <div class="logo">
+                    <svg width="230" height="227" fill="none" viewBox="0 0 230 227"><g filter="url(#filter0_d)"><circle cx="113.5" cy="113.5" r="111.5" fill="#F5F5F5"/></g><g filter="url(#filter1_d)"><path d="M33 117h29l27 59 5.5-54.5L100 67h80" stroke="#2274D5" stroke-width="18" stroke-miterlimit="2.55" stroke-linecap="square"/></g><g filter="url(#filter2_d)"><path d="M121.973 172V85.457h16.201v45.527l18.97-20.713h20.2l-23.174 25.328L178.164 172h-18.97l-15.586-24.917-5.434 5.947V172h-16.201z" fill="#000"/></g><defs><filter id="filter0_d" x="0" y="0" width="227" height="227" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/><feOffset/><feGaussianBlur stdDeviation="1"/><feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/><feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/><feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/></filter><filter id="filter1_d" x="22" y="57" width="169" height="125.745" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/><feOffset dy="1"/><feGaussianBlur stdDeviation="1"/><feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/><feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/><feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/></filter><filter id="filter2_d" x="120.973" y="85.457" width="58.191" height="88.543" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/><feOffset dy="1"/><feGaussianBlur stdDeviation=".5"/><feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"/><feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/><feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/></filter></defs></svg>
+                    <h1>kalk</h1>
+                </div>
+                <h3>A command line calculator that supports user-defined variables, functions, and to some extent units.
+                </h3>
+                <a class="button github" href="https://github.com/PaddiM8/kalk" role="button">GitHub Repo</a>
+                <a class="button" href="#downloads" role="button">Download</a>
+            </header>
+
+            <div class="preview">
+                <kalk-calculator>
+                    <p><span class="input">&gt;&gt;</span> <span class="var">f</span>(<span class="var">x</span>,
+                        <span class="var">y</span>) <span class="op">=</span> <span class="var">Σ</span>(1, 3,
+                        (2<span class="var">sin</span>4/<span class="var">x</span><span class="op">!</span>)<span
+                            class="op">^</span><span class="var">y</span>
+                        <span class="op">%</span>
+                        <span class="var">n</span>) <span class="op">+</span> <span class="var">cos</span>(60<span
+                            class="op">°</span>)
+                    </p>
+                    <p><span class="input">&gt;&gt;</span> <span class="var">a</span> <span class="op">=</span> 3
+                    </p>
+                    <p><span class="input">&gt;&gt;</span> <span class="var">f</span>(<span class="var">a</span>, 2)
+                        <span class="op">/</span> 8</p>
+                    <p class="output">0.0863645842</p>
+                    <p><span class="input">&gt;&gt;</span> <span class="var">Γ</span>(⌊3<span class="var">π</span><span
+                            class="op">+</span>2⌋ <span class="op">+</span> <span class="var">√</span>2)</p>
+                    <p class="output">1.1060309421365242<span class="op">*</span>10<span class="op">^</span>8</p>
+                    <p><span class="input">&gt;&gt;</span> <span class="var">Σ</span>(0, 100000, 1/<span
+                            class="var">n</span><span class="op">!</span>)
+                    <p class="output">2.7182818284590455</p>
+                </kalk-calculator>
+            </div>
+        </div>
+    </main>
+    <section class="features pane">
+        <div class="content">
+            <h2>Features</h2>
+            <ul>
+                <li>Operators: +, -, *, /, !, %</li>
+                <li>Groups: (), ⌈⌉, ⌋⌊</li>
+                <li>Pre-defined functions and constants</li>
+                <li>User-defined functions and variables</li>
+                <li>User-defined units (experimental)</li>
+                <li>Understands fairly ambiguous syntax. Eg. 2sin50 + 2xy</li>
+                <li>Syntax highlighting</li>
+                <li>Completion for special symbols on tab</li>
+                <li>Sum function</li>
+                <li>Load a file including predefined functions and constants</li>
+            </ul>
+        </div>
+    </section>
+    <section class="usage pane">
+        <div class="content">
+            <h2>Usage</h2>
+            <h3>All the calculator features and how they're used.</h3>
+
+            <h4>Operators</h4>
+            <hr>
+            <ul>
+                <li><code>+</code>, <code>-</code>, <code>*</code>, <code>/</code></li>
+                <li><code>!</code> Factorial, eg. <code>5!</code> gives <code>120</code></li>
+                <li><code>%</code> Percent, eg. <code>5%</code> gives <code>0.05</code>, <code>10 + 50%</code> gives
+                    <code>15</code></li>
+                <li><code>%</code> Modulus (remainder), eg. <code>23 % 3</code> gives <code>2</code></li>
+            </ul>
+
+            <h4>Completion for special symbols</h4>
+            <hr>
+            <p>You can type special symbols (such as √) by typing the normal function or constant name and pressing tab.
+            </p>
+            <ul>
+                <li><code>sqrt</code> becomes <code>√</code></li>
+                <li><code>deg</code> becomes <code>°</code></li>
+                <li><code>pi</code> becomes <code>π</code></li>
+                <li><code>sum</code> becomes <code>Σ()</code></li>
+                <li><code>tau</code> becomes <code>τ</code></li>
+                <li><code>phi</code> becomes <code>ϕ</code></li>
+                <li><code>floor</code> becomes <code>⌊⌋</code></li>
+                <li><code>ceil</code> becomes <code>⌈⌉</code></li>
+                <li><code>gamma</code> becomes <code>Γ</code></li>
+                <li><code>(</code> becomes <code>()</code></li>
+            </ul>
+
+            <h4>Variables</h4>
+            <hr>
+            <p>Variables are defined with the following syntax: <code>name = value</code></p>
+            <p>
+                <string>Examples: </string><code>x = 3/4</code>
+            </p>
+
+            <h4>Functions</h4>
+            <hr>
+            <p>Functions are defined with the following syntax: <code>name(param1, param2, etc.) = value</code></p>
+            <p>
+                <string>Examples: </string>
+                <code>f(x) = 2x+3</code>
+                <code>A(x, y) = (xy)/2</code>
+            </p>
+            <p>They are used like this: <code>name(arg1, arg2, etc.)</code></p>
+            <p>
+                <string>Examples: </string>
+                <code>f(3) + 3</code>
+                <code>A(2, 3)</code>
+            </p>
+
+            <h4>Predefined functions</h4>
+            <hr>
+            <ul>
+                <li><code>sin</code>, <code>cos</code>, <code>tan</code>, <code>cot</code>, <code>cosec</code>,
+                    <code>sec</code></li>
+                <li><code>sinh</code>, <code>cosh</code>, <code>tanh</code>, <code>coth</code>, <code>cosech</code>,
+                    <code>sech</code></li>
+                <li><code>asin</code>, <code>acos</code>, <code>atan</code>, <code>acot</code>, <code>acosec</code>,
+                    <code>asec</code></li>
+                <li><code>asinh</code>, <code>acosh</code>, <code>atanh</code>, <code>acoth</code>,
+                    <code>acosech</code>, <code>asech</code></li>
+                <li><code>abs</code>, <code>ceil</code> or <code>⌈⌉</code>, <code>floor</code> or <code>⌊⌋</code>,
+                    <code>frac</code>,
+                    <code>round</code>, <code>trunc</code></li>
+                <li><code>sqrt</code> or <code>√</code>, <code>cbrt</code>, <code>exp</code>, <code>log</code>,
+                    <code>ln</code></li>
+                <li><code>gamma</code> or <code>Γ</code></li>
+                <li><code>asinh</code>, <code>acosh</code>, <code>atanh</code>, <code>acoth</code>,
+                    <code>acosech</code>, <code>asech</code></li>
+                <li><code>min</code>, <code>max</code>, <code>hyp</code></li>
+                <li><code>log</code> Eg. <code>log(1000, 10)</code> is the same as log<sub>10</sub>(1000)</li>
+                <li><code>root</code> Eg. <code>root(16, 3)</code> is the same as <sup>3</sup>√16</li>
+                <li><code>sum</code> Eg. <code>sum(1, 4, 2n)</code> is the same as <svg height="42.6901pt" width="39.6592pt" viewBox="271.344 99.5711 39.6592 42.6901" class="maths"><defs><path d="M15.135 16.737l1.447-3.825h-.3c-.465 1.243-1.733 2.056-3.107 2.414-.252.06-1.423.371-3.718.371h-7.21L8.334 8.56c.083-.096.107-.132.107-.191 0-.024 0-.06-.083-.18L2.786.574h6.551c1.602 0 2.69.167 2.797.191.646.096 1.686.299 2.63.897.3.191 1.113.729 1.519 1.697h.299L15.135 0H1.005C.728 0 .716.012.68.084.67.12.67.347.67.478l6.325 8.656L.8 16.39c-.12.144-.12.204-.12.216 0 .131.108.131.323.131h14.131z" id="g0-88"/><path d="M2.463-3.503c.024-.072.323-.67.765-1.052.31-.287.717-.478 1.183-.478.479 0 .646.359.646.837 0 .681-.49 2.044-.73 2.69-.107.287-.167.442-.167.657 0 .538.371.969.945.969 1.112 0 1.53-1.758 1.53-1.83 0-.06-.048-.107-.12-.107-.107 0-.119.036-.179.239-.275.98-.729 1.458-1.195 1.458-.12 0-.311-.012-.311-.394 0-.299.131-.658.203-.825.24-.658.741-1.996.741-2.678 0-.717-.418-1.255-1.327-1.255-1.064 0-1.626.753-1.84 1.052-.037-.682-.527-1.052-1.053-1.052-.382 0-.645.227-.849.633C.49-4.209.323-3.49.323-3.443s.048.108.131.108c.096 0 .108-.012.18-.287.19-.73.406-1.411.884-1.411.275 0 .37.191.37.55 0 .263-.119.73-.202 1.1l-.335 1.29c-.048.228-.18.766-.24.981-.083.311-.214.873-.214.933 0 .167.131.299.31.299.144 0 .311-.072.407-.252.024-.06.131-.478.191-.717l.263-1.076.395-1.578z" id="g2-110"/><path d="M1.594-1.307c.024-.12.104-.423.128-.542.111-.43.111-.438.294-.701.263-.391.638-.742 1.172-.742.287 0 .454.168.454.542 0 .439-.334 1.347-.486 1.738-.103.263-.103.31-.103.414 0 .455.374.678.717.678.78 0 1.108-1.116 1.108-1.22 0-.08-.064-.103-.12-.103-.095 0-.111.055-.135.135-.192.654-.526.965-.83.965-.127 0-.19-.08-.19-.263s.063-.36.143-.558c.12-.303.47-1.22.47-1.666 0-.598-.414-.885-.988-.885-.646 0-1.06.39-1.291.694-.056-.439-.407-.694-.813-.694-.287 0-.486.183-.614.43a3.148 3.148 0 00-.27.79c0 .071.055.103.119.103.103 0 .111-.032.167-.239.096-.39.24-.86.574-.86.207 0 .255.199.255.374 0 .143-.04.295-.104.558a43.13 43.13 0 01-.167.645L.789-.518c-.032.12-.08.319-.08.35C.71.017.861.08.964.08a.385.385 0 00.32-.192c.023-.047.087-.318.127-.486l.183-.71z" id="g1-110"/><path d="M2.503-5.077c0-.215-.016-.223-.232-.223-.326.319-.749.51-1.506.51v.263c.215 0 .646 0 1.108-.215v4.088c0 .295-.024.391-.781.391H.813V0c.327-.024 1.012-.024 1.37-.024s1.053 0 1.38.024v-.263h-.28c-.756 0-.78-.096-.78-.39v-4.424z" id="g3-49"/><path d="M3.14-5.157c0-.16 0-.223-.167-.223-.104 0-.112.008-.191.12L.239-1.57v.263h2.248v.661c0 .295-.024.383-.638.383h-.183V0c.677-.024.693-.024 1.147-.024s.47 0 1.148.024v-.263h-.183c-.614 0-.638-.088-.638-.383v-.661h.845v-.263H3.14v-3.587zm-.598.646v2.94H.518l2.024-2.94z" id="g3-52"/><path d="M5.826-2.654c.12 0 .28 0 .28-.183s-.192-.184-.312-.184H.781c-.12 0-.31 0-.31.184s.159.183.278.183h5.077zm-.032 1.69c.12 0 .311 0 .311-.184s-.16-.183-.279-.183H.75c-.12 0-.279 0-.279.183s.192.184.311.184h5.013z" id="g3-61"/><path d="M5.26-2.008h-.263c-.036.203-.131.86-.25 1.052-.084.107-.766.107-1.125.107H1.411c.323-.275 1.052-1.04 1.363-1.327C4.59-3.85 5.26-4.47 5.26-5.655c0-1.375-1.088-2.295-2.474-2.295s-2.2 1.183-2.2 2.212c0 .61.526.61.562.61.25 0 .562-.18.562-.563 0-.334-.228-.562-.562-.562-.108 0-.132 0-.168.012.227-.813.873-1.362 1.65-1.362 1.016 0 1.638.848 1.638 1.948 0 1.016-.586 1.901-1.267 2.666L.586-.287V0h4.363l.311-2.008z" id="g4-50"/></defs><g id="page1" transform="scale(1.25)"><use x="223.592" xlink:href="#g3-52" y="85.037"/><use x="217.075" xlink:href="#g0-88" y="88.623"/><use x="217.73" xlink:href="#g1-110" y="113.729"/><use x="222.849" xlink:href="#g3-61" y="113.729"/><use x="229.411" xlink:href="#g3-49" y="113.729"/><use x="236.336" xlink:href="#g4-50" y="99.981"/><use x="242.167" xlink:href="#g2-110" y="99.981"/></g></svg>
+                </li>
+            </ul>
+
+            <h4>Constants</h4>
+            <hr>
+            <ul><code>pi</code> or <code>π</code> = <code>3.14159265</code></ul>
+            <ul><code>e</code> = <code>2.71828182</code></ul>
+            <ul><code>tau</code> or <code>τ</code> = <code>6.2831853</code></ul>
+            <ul><code>phi</code> or <code>ϕ</code> = <code>1.61803398</code></ul>
+        </div>
+    </section>
+    <section class="downloads" id="downloads">
+        <div class="content">
+            <h2>Download</h2>
+            <h3>kalk officially runs on Linux, Windows, and macOS.</h3>
+            <a class="download button" href="https://github.com/PaddiM8/kalk/releases/latest/download/kalk-linux"
+                role="button">
+                <svg viewBox="0 0 128 128" class="linux"><path fill-rule="evenodd" clip-rule="evenodd" d="M113.823 104.595c-1.795-1.478-3.629-2.921-5.308-4.525-1.87-1.785-3.045-3.944-2.789-6.678.147-1.573-.216-2.926-2.113-3.452.446-1.154.864-1.928 1.033-2.753.188-.92.178-1.887.204-2.834.264-9.96-3.334-18.691-8.663-26.835-2.454-3.748-5.017-7.429-7.633-11.066-4.092-5.688-5.559-12.078-5.633-18.981a47.564 47.564 0 00-1.081-9.475C80.527 11.956 77.291 7.233 71.422 4.7c-4.497-1.942-9.152-2.327-13.901-1.084-6.901 1.805-11.074 6.934-10.996 14.088.074 6.885.417 13.779.922 20.648.288 3.893-.312 7.252-2.895 10.34-2.484 2.969-4.706 6.172-6.858 9.397-1.229 1.844-2.317 3.853-3.077 5.931-2.07 5.663-3.973 11.373-7.276 16.5-1.224 1.9-1.363 4.026-.494 6.199.225.563.363 1.429.089 1.882-2.354 3.907-5.011 7.345-10.066 8.095-3.976.591-4.172 1.314-4.051 5.413.1 3.337.061 6.705-.28 10.021-.363 3.555.008 4.521 3.442 5.373 7.924 1.968 15.913 3.647 23.492 6.854 3.227 1.365 6.465.891 9.064-1.763 2.713-2.771 6.141-3.855 9.844-3.859 6.285-.005 12.572.298 18.86.369 1.702.02 2.679.653 3.364 2.199.84 1.893 2.26 3.284 4.445 3.526 4.193.462 8.013-.16 11.19-3.359 3.918-3.948 8.436-7.066 13.615-9.227 1.482-.619 2.878-1.592 4.103-2.648 2.231-1.922 2.113-3.146-.135-5zM62.426 24.12c.758-2.601 2.537-4.289 5.243-4.801 2.276-.43 4.203.688 5.639 3.246 1.546 2.758 2.054 5.64.734 8.658-1.083 2.474-1.591 2.707-4.123 1.868-.474-.157-.937-.343-1.777-.652.708-.594 1.154-1.035 1.664-1.382 1.134-.772 1.452-1.858 1.346-3.148-.139-1.694-1.471-3.194-2.837-3.175-1.225.017-2.262 1.167-2.4 2.915-.086 1.089.095 2.199.173 3.589-3.446-1.023-4.711-3.525-3.662-7.118zm-12.75-2.251c1.274-1.928 3.197-2.314 5.101-1.024 2.029 1.376 3.547 5.256 2.763 7.576-.285.844-1.127 1.5-1.716 2.241l-.604-.374c-.23-1.253-.276-2.585-.757-3.733-.304-.728-1.257-1.184-1.919-1.762-.622.739-1.693 1.443-1.757 2.228-.088 1.084.477 2.28.969 3.331.311.661 1.001 1.145 1.713 1.916l-1.922 1.51c-3.018-2.7-3.915-8.82-1.871-11.909zM87.34 86.075c-.203 2.604-.5 2.713-3.118 3.098-1.859.272-2.359.756-2.453 2.964a101.744 101.744 0 00-.012 7.753c.061 1.77-.537 3.158-1.755 4.393-6.764 6.856-14.845 10.105-24.512 8.926-4.17-.509-6.896-3.047-9.097-6.639.98-.363 1.705-.607 2.412-.894 3.122-1.27 3.706-3.955 1.213-6.277-1.884-1.757-3.986-3.283-6.007-4.892-1.954-1.555-3.934-3.078-5.891-4.629-1.668-1.323-2.305-3.028-2.345-5.188-.094-5.182.972-10.03 3.138-14.747 1.932-4.209 3.429-8.617 5.239-12.885.935-2.202 1.906-4.455 3.278-6.388 1.319-1.854 2.134-3.669 1.988-5.94-.084-1.276-.016-2.562-.016-3.843l.707-.352c1.141.985 2.302 1.949 3.423 2.959 4.045 3.646 7.892 3.813 12.319.67 1.888-1.341 3.93-2.47 5.927-3.652.497-.294 1.092-.423 1.934-.738 2.151 5.066 4.262 10.033 6.375 15 1.072 2.524 1.932 5.167 3.264 7.547 2.671 4.775 4.092 9.813 4.07 15.272-.012 2.83.137 5.67-.081 8.482z"/></svg>
+                <div class="text">
+                    <strong>Download</strong>
+                    <span>for Linux</span>
+                </div>
+            </a>
+            <a class="download button" href="https://github.com/PaddiM8/kalk/releases/latest/download/kalk-windows.msi"
+                role="button">
+                <svg viewBox="0 0 128 128" class="windows"><path d="M126 1.637l-67 9.834v49.831l67-.534zM1.647 66.709l.003 42.404 50.791 6.983-.04-49.057zm56.82.68l.094 49.465 67.376 9.509.016-58.863zM1.61 19.297l.047 42.383 50.791-.289-.023-49.016z"/></svg>
+                <div class="text">
+                    <strong>Download</strong>
+                    <span>for Windows</span>
+                </div>
+            </a>
+            <a class="download button" href="https://github.com/PaddiM8/kalk/releases/latest/download/kalk-macOS.zip"
+                role="button">
+                <svg viewBox="0 0 128 128" class="mac"><path d="M97.905 67.885c.174 18.8 16.494 25.057 16.674 25.137-.138.44-2.607 8.916-8.597 17.669-5.178 7.568-10.553 15.108-19.018 15.266-8.318.152-10.993-4.934-20.504-4.934-9.508 0-12.479 4.776-20.354 5.086-8.172.31-14.395-8.185-19.616-15.724C15.822 94.961 7.669 66.8 18.616 47.791c5.438-9.44 15.158-15.417 25.707-15.571 8.024-.153 15.598 5.398 20.503 5.398 4.902 0 14.106-6.676 23.782-5.696 4.051.169 15.421 1.636 22.722 12.324-.587.365-13.566 7.921-13.425 23.639M82.272 21.719c4.338-5.251 7.258-12.563 6.462-19.836-6.254.251-13.816 4.167-18.301 9.416-4.02 4.647-7.54 12.087-6.591 19.216 6.971.54 14.091-3.542 18.43-8.796"/></svg>
+                <div class="text">
+                    <strong>Download</strong>
+                    <span>for macOS</span>
+                </div>
+            </a>
+        </div>
+    </section>
+    <footer>
+        Made by PaddiM8 - Hosted on <a href="https://netlify.com">Netlify</a>
+    </footer>
+</body>
+
+</html>
