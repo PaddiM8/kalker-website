@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "build": "gulp",
-    "serve": "gulp && wasm-server"
+    "serve": "gulp && cd public; wasm-server"
   },
   "repository": {
     "type": "git",
