@@ -24,7 +24,7 @@ task('copyKalkComponent', async () => {
 });
 
 task('watch', () => {
-    watch('./style/**/*.sass', ['sass']);
+    watch('./style/**/*.sass', series('sass'));
 
 });
 
