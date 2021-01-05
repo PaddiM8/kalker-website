@@ -1,4 +1,5 @@
 dist/
+public/*.html
 .sass-cache/
 *.css.map
 *.sass.map

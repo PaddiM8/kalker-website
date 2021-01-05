@@ -1,6 +1,6 @@
 'use strict';
 
-import { task, src, dest, watch, parallel } from 'gulp';
+import { task, src, dest, watch, series } from 'gulp';
 import sass, { compiler, logError } from 'gulp-sass';
 import inlineSource from 'gulp-inline-source-html'
 
@@ -28,7 +28,4 @@ task('watch', () => {
 
 });
 
-task('default', done => {
-    parallel('sass', 'inlineSource', 'copyKalkComponent');
-    done();
-});
+task('default', series('sass', 'inlineSource', 'copyKalkComponent'));
