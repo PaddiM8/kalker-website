@@ -3,8 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="description"
+        content="Kalk is a calculator that supports user-defined variables, functions, and ambiguous syntax. It runs on Windows, macOS, Linux, Android, and in web browsers (with WebAssembly).">
+    <meta name="application-name" content="kalk">
+    <meta name="author" content="PaddiM8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>kalk</title>
+    <meta name="google-site-verification" content="DnQqwEBWiou-9sr0nft_ob0dDZ7O-1MnEQ-2fs3Zp5U" />
+    <title>kalk - A flexible calculator that supports variables and functions defined by the user</title>
     <link rel="stylesheet" href="dist/main.css">
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -12,6 +17,7 @@
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack-subset.css">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <script async defer data-domain="kalk.strct.net" src="stats.js"></script>
     <script src="dist/bundle.js"></script>
 </head>
 
@@ -25,8 +31,14 @@
                 </div>
                 <h3>A command line calculator that supports user-defined variables, functions, and to some extent units.
                 </h3>
-                <a class="button github" href="https://github.com/PaddiM8/kalk" role="button">GitHub Repo</a>
-                <a class="button" href="#downloads" role="button">Download</a>
+                <a class="button github" href="https://github.com/PaddiM8/kalk" role="button">
+                    <svg class="icon" viewBox="0 0 512 512"><path d="M256 32C132.3 32 32 134.9 32 261.7c0 101.5 64.2 187.5 153.2 217.9a17.56 17.56 0 003.8.4c8.3 0 11.5-6.1 11.5-11.4 0-5.5-.2-19.9-.3-39.1a102.4 102.4 0 01-22.6 2.7c-43.1 0-52.9-33.5-52.9-33.5-10.2-26.5-24.9-33.6-24.9-33.6-19.5-13.7-.1-14.1 1.4-14.1h.1c22.5 2 34.3 23.8 34.3 23.8 11.2 19.6 26.2 25.1 39.6 25.1a63 63 0 0025.6-6c2-14.8 7.8-24.9 14.2-30.7-49.7-5.8-102-25.5-102-113.5 0-25.1 8.7-45.6 23-61.6-2.3-5.8-10-29.2 2.2-60.8a18.64 18.64 0 015-.5c8.1 0 26.4 3.1 56.6 24.1a208.21 208.21 0 01112.2 0c30.2-21 48.5-24.1 56.6-24.1a18.64 18.64 0 015 .5c12.2 31.6 4.5 55 2.2 60.8 14.3 16.1 23 36.6 23 61.6 0 88.2-52.4 107.6-102.3 113.3 8 7.1 15.2 21.1 15.2 42.5 0 30.7-.3 55.5-.3 63 0 5.4 3.1 11.5 11.4 11.5a19.35 19.35 0 004-.4C415.9 449.2 480 363.1 480 261.7 480 134.9 379.7 32 256 32z"/></svg>
+                    <div class="text">GitHub Repo</div>
+                </a>
+                <a class="button to-download" href="#downloads" role="button">
+                    <svg role="img" width="48px" height="48px" aria-labelledby="downloadIconTitle" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter" fill="none" color="#FFFFFF" viewBox="0 0 24 24" class="icon"><path d="M12 3v13M7 12l5 5 5-5M20 21H4"/></svg>
+                    <div class="text">Download</div>
+                </a>
             </header>
 
             <div class="preview">
@@ -42,7 +54,8 @@
                     <p><span class="input">&gt;&gt;</span> <span class="var">a</span> <span class="op">=</span> 3
                     </p>
                     <p><span class="input">&gt;&gt;</span> <span class="var">f</span>(<span class="var">a</span>, 2)
-                        <span class="op">/</span> 8</p>
+                        <span class="op">/</span> 8
+                    </p>
                     <p class="output">0.0863645842</p>
                     <p><span class="input">&gt;&gt;</span> <span class="var">Γ</span>(⌊3<span class="var">π</span><span
                             class="op">+</span>2⌋ <span class="op">+</span> <span class="var">√</span>2)</p>
@@ -52,7 +65,7 @@
                     <p class="output">2.7182818284590455</p>
                 </kalk-calculator>
             </div>
-            <a class="new-session-link" href="kalk.html" target="blank">Open a kalk session in a new tab</a>
+            <a class="new-session-link" href="kalk" target="blank">Open a kalk session in a new tab</a>
         </div>
     </main>
     <section class="features pane">
@@ -83,7 +96,8 @@
                 <li><code>+</code>, <code>-</code>, <code>*</code>, <code>/</code></li>
                 <li><code>!</code> Factorial, eg. <code>5!</code> gives <code>120</code></li>
                 <li><code>%</code> Percent, eg. <code>5%</code> gives <code>0.05</code>, <code>10 + 50%</code> gives
-                    <code>15</code></li>
+                    <code>15</code>
+                </li>
                 <li><code>%</code> Modulus (remainder), eg. <code>23 % 3</code> gives <code>2</code></li>
             </ul>
 
@@ -130,21 +144,28 @@
             <hr>
             <ul>
                 <li><code>sin</code>, <code>cos</code>, <code>tan</code>, <code>cot</code>, <code>cosec</code>,
-                    <code>sec</code></li>
+                    <code>sec</code>
+                </li>
                 <li><code>sinh</code>, <code>cosh</code>, <code>tanh</code>, <code>coth</code>, <code>cosech</code>,
-                    <code>sech</code></li>
+                    <code>sech</code>
+                </li>
                 <li><code>asin</code>, <code>acos</code>, <code>atan</code>, <code>acot</code>, <code>acosec</code>,
-                    <code>asec</code></li>
+                    <code>asec</code>
+                </li>
                 <li><code>asinh</code>, <code>acosh</code>, <code>atanh</code>, <code>acoth</code>,
-                    <code>acosech</code>, <code>asech</code></li>
+                    <code>acosech</code>, <code>asech</code>
+                </li>
                 <li><code>abs</code>, <code>ceil</code> or <code>⌈⌉</code>, <code>floor</code> or <code>⌊⌋</code>,
                     <code>frac</code>,
-                    <code>round</code>, <code>trunc</code></li>
+                    <code>round</code>, <code>trunc</code>
+                </li>
                 <li><code>sqrt</code> or <code>√</code>, <code>cbrt</code>, <code>exp</code>, <code>log</code>,
-                    <code>ln</code></li>
+                    <code>ln</code>
+                </li>
                 <li><code>gamma</code> or <code>Γ</code></li>
                 <li><code>asinh</code>, <code>acosh</code>, <code>atanh</code>, <code>acoth</code>,
-                    <code>acosech</code>, <code>asech</code></li>
+                    <code>acosech</code>, <code>asech</code>
+                </li>
                 <li><code>min</code>, <code>max</code>, <code>hyp</code></li>
                 <li><code>log</code> Eg. <code>log(1000, 10)</code> is the same as log<sub>10</sub>(1000)</li>
                 <li><code>root</code> Eg. <code>root(16, 3)</code> is the same as <sup>3</sup>√16</li>

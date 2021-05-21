@@ -84,24 +84,35 @@ li
         background-color: darken($secondary-color, 4%)
 
     & > svg
-        $svg-size: 36px
-        display: block
-        width: $svg-size
         height: auto
-        fill: white
         margin-right: 10px
-
-        &.windows
-            width: $svg-size - 4px
-            padding: 2px
 
 .button.download
     padding-left: 20px
     padding-right: 20px
 
-.github
+    & > svg
+        $svg-size: 36px
+        width: $svg-size
+        display: block
+        fill: white
+
+        &.windows
+            width: $svg-size - 4px
+            padding: 2px
+
+.button.to-download, .button.github
+    font-weight: 600
+
+    .icon
+        width: 28px
+
+.button.github
     background-color: $light-color
     color: black
+
+    .icon
+        fill: #373737
 
     &:hover
         background-color: darken($light-color, 10%)
@@ -191,7 +202,7 @@ code
 
 .preview
     height: 420px
-    font-family: "Hack", sans-serif
+    font-family: "Hack", Consolas, monospace, sans-serif
     background-color: lighten($primary-color, 5%)
     padding: 10px 20px 10px 20px
     border-radius: 7px

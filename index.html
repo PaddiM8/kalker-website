@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Kalk is a calculator that supports user-defined variables, functions, and ambiguous syntax. It runs on Windows, macOS, Linux, Android, and in web browsers (with WebAssembly).">
+    <meta name="description"
+        content="Kalk is a calculator that supports user-defined variables, functions, and ambiguous syntax. It runs on Windows, macOS, Linux, Android, and in web browsers (with WebAssembly).">
     <meta name="application-name" content="kalk">
     <meta name="author" content="PaddiM8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,8 +31,14 @@
                 </div>
                 <h3>A command line calculator that supports user-defined variables, functions, and to some extent units.
                 </h3>
-                <a class="button github" href="https://github.com/PaddiM8/kalk" role="button">GitHub Repo</a>
-                <a class="button" href="#downloads" role="button">Download</a>
+                <a class="button github" href="https://github.com/PaddiM8/kalk" role="button">
+                    <img class="icon" inline src="public/res/github.svg" />
+                    <div class="text">GitHub Repo</div>
+                </a>
+                <a class="button to-download" href="#downloads" role="button">
+                    <img class="icon" inline src="public/res/download.svg" />
+                    <div class="text">Download</div>
+                </a>
             </header>
 
             <div class="preview">
@@ -47,7 +54,8 @@
                     <p><span class="input">&gt;&gt;</span> <span class="var">a</span> <span class="op">=</span> 3
                     </p>
                     <p><span class="input">&gt;&gt;</span> <span class="var">f</span>(<span class="var">a</span>, 2)
-                        <span class="op">/</span> 8</p>
+                        <span class="op">/</span> 8
+                    </p>
                     <p class="output">0.0863645842</p>
                     <p><span class="input">&gt;&gt;</span> <span class="var">Γ</span>(⌊3<span class="var">π</span><span
                             class="op">+</span>2⌋ <span class="op">+</span> <span class="var">√</span>2)</p>
@@ -88,7 +96,8 @@
                 <li><code>+</code>, <code>-</code>, <code>*</code>, <code>/</code></li>
                 <li><code>!</code> Factorial, eg. <code>5!</code> gives <code>120</code></li>
                 <li><code>%</code> Percent, eg. <code>5%</code> gives <code>0.05</code>, <code>10 + 50%</code> gives
-                    <code>15</code></li>
+                    <code>15</code>
+                </li>
                 <li><code>%</code> Modulus (remainder), eg. <code>23 % 3</code> gives <code>2</code></li>
             </ul>
 
@@ -135,21 +144,28 @@
             <hr>
             <ul>
                 <li><code>sin</code>, <code>cos</code>, <code>tan</code>, <code>cot</code>, <code>cosec</code>,
-                    <code>sec</code></li>
+                    <code>sec</code>
+                </li>
                 <li><code>sinh</code>, <code>cosh</code>, <code>tanh</code>, <code>coth</code>, <code>cosech</code>,
-                    <code>sech</code></li>
+                    <code>sech</code>
+                </li>
                 <li><code>asin</code>, <code>acos</code>, <code>atan</code>, <code>acot</code>, <code>acosec</code>,
-                    <code>asec</code></li>
+                    <code>asec</code>
+                </li>
                 <li><code>asinh</code>, <code>acosh</code>, <code>atanh</code>, <code>acoth</code>,
-                    <code>acosech</code>, <code>asech</code></li>
+                    <code>acosech</code>, <code>asech</code>
+                </li>
                 <li><code>abs</code>, <code>ceil</code> or <code>⌈⌉</code>, <code>floor</code> or <code>⌊⌋</code>,
                     <code>frac</code>,
-                    <code>round</code>, <code>trunc</code></li>
+                    <code>round</code>, <code>trunc</code>
+                </li>
                 <li><code>sqrt</code> or <code>√</code>, <code>cbrt</code>, <code>exp</code>, <code>log</code>,
-                    <code>ln</code></li>
+                    <code>ln</code>
+                </li>
                 <li><code>gamma</code> or <code>Γ</code></li>
                 <li><code>asinh</code>, <code>acosh</code>, <code>atanh</code>, <code>acoth</code>,
-                    <code>acosech</code>, <code>asech</code></li>
+                    <code>acosech</code>, <code>asech</code>
+                </li>
                 <li><code>min</code>, <code>max</code>, <code>hyp</code></li>
                 <li><code>log</code> Eg. <code>log(1000, 10)</code> is the same as log<sub>10</sub>(1000)</li>
                 <li><code>root</code> Eg. <code>root(16, 3)</code> is the same as <sup>3</sup>√16</li>
