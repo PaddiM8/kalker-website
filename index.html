@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="description"
-        content="Kalk is a calculator that supports user-defined variables, functions, and ambiguous syntax. It runs on Windows, macOS, Linux, Android, and in web browsers (with WebAssembly).">
+        content="Kalk is a calculator that supports user-defined variables, functions, ambiguous syntax, derivation and integration. It runs on Windows, macOS, Linux, Android, and in web browsers (with WebAssembly).">
     <meta name="application-name" content="kalk">
     <meta name="author" content="PaddiM8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -61,8 +61,8 @@
                             class="op">+</span>2⌋ <span class="op">+</span> <span class="var">√</span>2)</p>
                     <p class="output">1.1060309421365242<span class="op">*</span>10<span class="op">^</span>8</p>
                     <p><span class="input">&gt;&gt;</span> <span class="var">Σ</span>(0, 100000, 1/<span
-                            class="var">n</span><span class="op">!</span>)
-                    <p class="output">2.7182818284590455</p>
+                            class="var">n</span><span class="op">!</span>)</p>
+                    <p class="output">2.7182818284590455<span class="op"> ≈ </span><span class="var">e</span></p>
                 </kalk-calculator>
             </div>
             <a class="new-session-link" href="kalk" target="blank">Open a kalk session in a new tab</a>
@@ -110,6 +110,7 @@
                 <li><code>deg</code> becomes <code>°</code></li>
                 <li><code>pi</code> becomes <code>π</code></li>
                 <li><code>sum</code> becomes <code>Σ()</code></li>
+                <li><code>integrate</code> becomes <code>∫()</code></li>
                 <li><code>tau</code> becomes <code>τ</code></li>
                 <li><code>phi</code> becomes <code>ϕ</code></li>
                 <li><code>floor</code> becomes <code>⌊⌋</code></li>
@@ -138,6 +139,12 @@
                 <string>Examples: </string>
                 <code>f(3) + 3</code>
                 <code>A(2, 3)</code>
+            </p>
+            <p>Derivation can be done like this: <code>name'(arg1)</code></p>
+            <p>
+                <string>Examples: </string>
+                <code>f'(3) + 3</code>
+                <code>sin'(pi)</code>
             </p>
 
             <h4>Predefined functions</h4>
@@ -169,6 +176,8 @@
                 <li><code>min</code>, <code>max</code>, <code>hyp</code></li>
                 <li><code>log</code> Eg. <code>log(1000, 10)</code> is the same as log<sub>10</sub>(1000)</li>
                 <li><code>root</code> Eg. <code>root(16, 3)</code> is the same as <sup>3</sup>√16</li>
+                <li><code>integrate</code> Eg. <code>integrate(0, pi, sin(x) dx)</code> is the same as <img inline
+                        class="maths" src="public/res/integral.svg" /></li>
                 <li><code>sum</code> Eg. <code>sum(1, 4, 2n)</code> is the same as <img inline class="maths"
                         src="public/res/sum.svg" />
                 </li>

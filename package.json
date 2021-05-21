@@ -17,9 +17,7 @@
   },
   "homepage": "https://kalk.netlify.app",
   "dependencies": {
-    "@paddim8/kalk-component": "^1.0.16",
-    "audit": "^0.0.6",
-    "fix": "^0.0.6"
+    "@paddim8/kalk-component": "^1.0.17"
   },
   "devDependencies": {
     "esm": "^3.2.25",
