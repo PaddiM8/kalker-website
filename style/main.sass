@@ -10,6 +10,7 @@ body
     font-family: "Inter", sans-serif
     background-color: $light-color
     color: black
+    font-size: 15px
 
 h1, h2
     font-family: "Gothic A1", sans-serif
@@ -42,9 +43,9 @@ li
     align-items: baseline
 
     svg
-        width: 58px
+        width: 3.7em
         height: auto
-        margin-right: 15px
+        margin-right: 1em
         image-rendering: crisp-edges
 
     h1
@@ -63,9 +64,9 @@ li
     font-family: "Gothic A1", sans-serif
     text-decoration: none
 
-    padding: 12px
-    margin-right: 10px
-    margin-bottom: 10px
+    padding: 0.6em
+    margin-right: 1em
+    margin-bottom: 1em
     border-radius: 8px
 
     box-shadow: 1px 2px 5px rgba(0.6, 0.6, 0.6, 0.2)
@@ -75,7 +76,7 @@ li
     .text
         display: flex
         flex-direction: column
-        margin-top: 3px
+        margin-top: 0.2em
 
         span, strong
             vertical-align: sub
@@ -85,29 +86,29 @@ li
 
     & > svg
         height: auto
-        margin-right: 10px
+        margin-right: 0.5em
 
 .button.download
-    padding-left: 20px
-    padding-right: 20px
+    padding-left: 1.2em
+    padding-right: 1.2em
 
     & > svg
-        $svg-size: 36px
+        $svg-size: 2em
         width: $svg-size
         display: block
         fill: white
 
         &.windows
-            width: $svg-size - 4px
-            padding: 2px
+            width: $svg-size - 0.2em
+            padding: 0.1em
 
 .button.to-download, .button.github
-    padding-left: 15px
-    padding-right: 15px
+    padding-left: 0.9em
+    padding-right: 0.9em
     font-weight: 600
 
     .icon
-        width: 28px
+        width: 1.4em
 
 .button.github
     background-color: $light-color
@@ -123,16 +124,16 @@ main
     padding-top: 60px
 
 header
-    margin-bottom: 50px
+    margin-bottom: 3.2em
 
     h3
         font-size: 1.6em
         font-weight: 300
-        margin-top: 5px
+        margin-top: 0.15em
 
 .pane
-    padding: 0 50px
-    padding-top: 20px
+    padding: 0 3em
+    padding-top: 1.8em
 
 main, .downloads, footer
     background-color: $primary-color
@@ -140,7 +141,7 @@ main, .downloads, footer
 
 .pane .content
     width: 100%
-    padding: 20px 40px 0 40px
+    padding: 1.4em 2em 0 1.4em
     max-width: 900px
     margin-left: 50%
     transform: translateX(-50%)
@@ -150,7 +151,7 @@ main, .downloads, footer
         font-size: 1.2em
 
 .pane:first-child
-    padding-bottom: 80px
+    padding-bottom: 4.8em
 
 .features
     ul
@@ -164,7 +165,7 @@ main, .downloads, footer
         font-size: 1.2em
 
 .usage
-    padding-bottom: 80px
+    padding-bottom: 4.8em
 
     h4
         margin-top: 40px
@@ -181,7 +182,7 @@ main, .downloads, footer
         padding: 50px
 
 footer
-    padding: 40px
+    padding: 2.5em
     text-align: center
 
     a
@@ -193,12 +194,15 @@ code
     white-space: nowrap
     font-family: "Hack", Consolas, monospace, serif
     font-size: 0.8em
-    padding: 5px 9px
+    padding: 0.4em 0.7em
 
 .maths
-    width: 48px
-    height: auto
+    width: auto
+    height: 1.6em
     vertical-align: middle
+
+.maths.sum
+    height: 2.5em
 
 /* preview */
 
@@ -206,10 +210,10 @@ code
     height: 420px
     font-family: "Hack", Consolas, monospace, sans-serif
     background-color: lighten($primary-color, 5%)
-    padding: 10px 20px 10px 20px
+    padding: 1em
     border-radius: 7px
     box-shadow: 1px 1px 2px rgba(0.2, 0.2, 0.2, 0.4) inset
-    margin-bottom: 10px
+    margin-bottom: 0.9em
 
     p
         margin-top: 6px
