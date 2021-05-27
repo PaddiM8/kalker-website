@@ -2,9 +2,13 @@ $primary-color: #212121
 $secondary-color: #EF6C00
 $light-color: #F5F5F5
 
+html, body
+    overflow-x: hidden
+
 body
     width: 100%
     height: 100%
+    position: relative
     margin: 0
     padding: 0
     font-family: "Inter", sans-serif
@@ -207,13 +211,17 @@ code
 /* preview */
 
 .preview
-    height: 420px
+    min-height: 420px
     font-family: "Hack", Consolas, monospace, sans-serif
     background-color: lighten($primary-color, 5%)
     padding: 1em
     border-radius: 7px
     box-shadow: 1px 1px 2px rgba(0.2, 0.2, 0.2, 0.4) inset
     margin-bottom: 0.9em
+    box-sizing: border-box
+
+    [hinttext]
+        display: block
 
     p
         margin-top: 6px
@@ -230,3 +238,14 @@ code
 
     .var
         color: cornflowerblue
+
+@media screen and (max-width: 600px)
+    .new-session-link
+        margin-left: -2rem
+
+    .preview
+        width: calc(100vw + 0.3rem)
+        padding: 0
+        margin-left: -2.8rem
+        border-radius: 0
+        font-size: 0.8em

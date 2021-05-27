@@ -42,7 +42,7 @@
                 </a>
             </header>
 
-            <div class="preview">
+            <div id="preview" class="preview">
                 <kalk-calculator hinttext="Try me!">
                     <p><span class="input">&gt;&gt;</span> <span class="var">f</span>(<span class="var">x</span>,
                         <span class="var">y</span>) <span class="op">=</span> <span class="var">Σ</span>(1, 3,
@@ -170,7 +170,7 @@
                     <code>round</code>, <code>trunc</code>
                 </li>
                 <li><code>sqrt</code> or <code>√</code>, <code>cbrt</code>, <code>exp</code>, <code>log</code>,
-                    <code>ln</code>, <code>arg</code>
+                    <code>ln</code>, <code>arg</code>, <code>Re</code>, <code>Im</code>
                 </li>
                 <li><code>gamma</code> or <code>Γ</code></li>
                 <li><code>asinh</code>, <code>acosh</code>, <code>atanh</code>, <code>acoth</code>,
@@ -227,6 +227,14 @@
     <footer>
         Made by PaddiM8 - Hosted on <a href="https://netlify.com">Netlify</a>
     </footer>
+    <script>
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
+            const preview = document.getElementById("preview");
+            const kalk = preview.querySelector("kalk-calculator");
+            kalk.setAttribute("buttonpanel", "true");
+            kalk.setAttribute("numberrow", "true");
+        }
+    </script>
 </body>
 
 </html>
