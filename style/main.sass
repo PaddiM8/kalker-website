@@ -143,16 +143,21 @@ main, .downloads, footer
     background-color: $primary-color
     color: white
 
+.new-session-link, .other-download-link
+    color: $light-color
+
+.new-session-link
+    font-size: 1.2rem
+
+.other-download-link
+    font-size: 1rem
+
 .pane .content
     width: 100%
     padding: 1.4em 2em 0 1.4em
     max-width: 900px
     margin-left: 50%
     transform: translateX(-50%)
-
-    a.new-session-link
-        color: $light-color
-        font-size: 1.2em
 
 .pane:first-child
     padding-bottom: 4.8em
@@ -211,17 +216,13 @@ code
 /* preview */
 
 .preview
-    min-height: 420px
+    height: 420px
     font-family: "Hack", Consolas, monospace, sans-serif
     background-color: lighten($primary-color, 5%)
     padding: 1em
     border-radius: 7px
     box-shadow: 1px 1px 2px rgba(0.2, 0.2, 0.2, 0.4) inset
     margin-bottom: 0.9em
-    box-sizing: border-box
-
-    [hinttext]
-        display: block
 
     p
         margin-top: 6px
@@ -252,7 +253,8 @@ code
 
     .preview
         width: calc(100vw + 0.3rem)
+        height: 620px
         padding: 0
         margin-left: -2.8rem
         border-radius: 0
-        font-size: 0.8em
+        font-size: 0.9em

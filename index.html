@@ -45,39 +45,44 @@
 
             <div id="preview" class="preview">
                 <kalk-calculator hinttext="Try me!">
-                    <p><span class="input">&gt;&gt;</span> <span class="value"><span class="var">f</span>(<span
-                                class="var">x</span>) =
+                    <console-line><span class="input">&gt;&gt;</span> <span class="value"><span
+                                class="var">f</span>(<span class="var">x</span>) =
                             <span class="var">x</span>(3<span class="var">x</span>
-                            <span class="op">+</span> 1)</span> <span class="comment">← Declare functions</span></p>
-                    <p><span class="input">&gt;&gt;</span> <span class="value"><span class="var">a</span> = 1<span
-                                class="op">/</span>6</span> <span class="comment">← Declare variables</span></p>
-                    <p><span class="input">&gt;&gt;</span> <span class="value">6<span class="var">ia√</span>(<span
-                                class="var">f</span>'(<span class="var">a</span>))<span class="comment">← Derivation
+                            <span class="op">+</span> 1)</span> <span class="comment">← Declare functions</span>
+                    </console-line>
+                    <console-line><span class="input">&gt;&gt;</span> <span class="value"><span class="var">a</span>
+                            = 1<span class="op">/</span>6</span> <span class="comment">← Declare variables</span>
+                    </console-line>
+                    <console-line><span class="input">&gt;&gt;</span> <span class="value">6<span
+                                class="var">ia√</span>(<span class="var">f</span>'(<span class="var">a</span>))<span
+                                class="comment">← Derivation
                             </span></span>
-                    </p>
-                    <p> <span class="value">1.4142135624<span class="var">i</span></span> <span class="op">≈</span>
+                    </console-line>
+                    <console-line> <span class="value">1.4142135624<span class="var">i</span></span> <span
+                            class="op">≈</span>
                         <span class="var">√</span>2<span class="var">i <span class="comment">← Complex
                                 numbers</span></span>
-                    </p>
-                    <p><span class="input">&gt;&gt;</span> <span class="value"><span class="var">∫</span>(0, <span
-                                class="var">π</span>,
+                    </console-line>
+                    <console-line><span class="input">&gt;&gt;</span> <span class="value"><span class="var">∫</span>(0,
+                            <span class="var">π</span>,
                             <span class="var">sin2ix</span>, <span class="var">dx</span>)
                             <span class="op">+</span> <span class="var">e</span><span class="op">^</span>(<span
                                 class="var">πi</span>) <span class="op">/</span> 3
                             <span class="comment">← Integration</span>
                         </span>
-                    </p>
-                    <p> <span class="value"><span class="op">-</span>0.3333333333 <span class="op">+</span>
+                    </console-line>
+                    <console-line> <span class="value"><span class="op">-</span>0.3333333333 <span class="op">+</span>
                             133.3733807458<span class="var">i</span> <span class="op">≈ -</span>1<span
                                 class="op">/</span>3 <span class="op">+</span> 133.3733807458<span
                                 class="var">i</span></span>
-                    </p>
-                    <p><span class="input">&gt;&gt;</span> <span class="value"><span class="var">Σ</span>(0, 720, 1<span
-                                class="op">/</span><span class="var">n</span><span class="op">!</span>)</span> <span
-                            class="comment">← Calculating sums</span></p>
-                    <p> <span class="value">2.7182818285 <span class="op">≈</span> <span class="var">e</span></span>
-                    </p>
-                    </section>
+                    </console-line>
+                    <console-line><span class="input">&gt;&gt;</span> <span class="value"><span class="var">Σ</span>(0,
+                            720, 1<span class="op">/</span><span class="var">n</span><span class="op">!</span>)</span>
+                        <span class="comment">← Calculating sums</span>
+                    </console-line>
+                    <console-line> <span class="value">2.7182818285 <span class="op">≈</span>
+                            <span class="var">e</span></span>
+                    </console-line>
                 </kalk-calculator>
             </div>
             <a class="new-session-link" href="kalk" target="blank">Open a kalk session in a new tab</a>
@@ -212,31 +217,37 @@
     <section class="downloads" id="downloads">
         <div class="content">
             <h2>Download</h2>
-            <h3>kalk officially runs on Linux, Windows, and macOS.</h3>
-            <a class="download button" href="https://github.com/PaddiM8/kalk/releases/latest/download/kalk-linux"
-                role="button">
-                <img inline class="linux" src="public/res/linux.svg" />
-                <div class="text">
-                    <strong>Download</strong>
-                    <span>for Linux</span>
-                </div>
-            </a>
-            <a class="download button" href="https://github.com/PaddiM8/kalk/releases/latest/download/kalk-windows.msi"
-                role="button">
-                <img inline class="windows" src="public/res/windows.svg" />
-                <div class="text">
-                    <strong>Download</strong>
-                    <span>for Windows</span>
-                </div>
-            </a>
-            <a class="download button" href="https://github.com/PaddiM8/kalk/releases/latest/download/kalk-macOS.zip"
-                role="button">
-                <img inline class="mac" src="public/res/mac.svg" />
-                <div class="text">
-                    <strong>Download</strong>
-                    <span>for macOS</span>
-                </div>
-            </a>
+            <h3>kalk officially runs on Linux, Windows, macOS, and Android.</h3>
+            <div class="buttons">
+                <a class="download button" href="https://github.com/PaddiM8/kalk/releases/latest/download/kalk-linux"
+                    role="button">
+                    <img inline class="linux" src="public/res/linux.svg" />
+                    <div class="text">
+                        <strong>Download</strong>
+                        <span>for Linux</span>
+                    </div>
+                </a>
+                <a class="download button"
+                    href="https://github.com/PaddiM8/kalk/releases/latest/download/kalk-windows.msi" role="button">
+                    <img inline class="windows" src="public/res/windows.svg" />
+                    <div class="text">
+                        <strong>Download</strong>
+                        <span>for Windows</span>
+                    </div>
+                </a>
+                <a class="download button"
+                    href="https://github.com/PaddiM8/kalk/releases/latest/download/kalk-macOS.zip" role="button">
+                    <img inline class="mac" src="public/res/mac.svg" />
+                    <div class="text">
+                        <strong>Download</strong>
+                        <span>for macOS</span>
+                    </div>
+                </a>
+            </div>
+
+            <a class="other-download-link"
+                href="https://github.com/PaddiM8/kalk/releases/latest/download/kalk-android.apk">Download for
+                Android</a>
         </div>
     </section>
     <footer>

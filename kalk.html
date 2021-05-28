@@ -20,6 +20,13 @@
             </console-line>
         </kalk-calculator>
     </div>
+    <script>
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
+            const kalk = document.querySelector(".calculator > kalk-calculator");
+            kalk.setAttribute("buttonpanel", "true");
+            kalk.setAttribute("numberrow", "true");
+        }
+    </script>
 </body>
 
 </html>
