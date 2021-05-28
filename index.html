@@ -29,7 +29,8 @@
                     <img inline src="public/res/logo.svg">
                     <h1>kalk</h1>
                 </div>
-                <h3>A command line calculator that supports user-defined variables, functions, derivation, integration,
+                <h3>A command line calculator that supports math-like syntax with user-defined variables, functions,
+                    derivation, integration,
                     and complex numbers.
                 </h3>
                 <a class="button github" href="https://github.com/PaddiM8/kalk" role="button">
@@ -46,21 +47,24 @@
                 <kalk-calculator hinttext="Try me!">
                     <p><span class="input">&gt;&gt;</span> <span class="value"><span class="var">f</span>(<span
                                 class="var">x</span>) =
-                            <span clsas="var">x</span>(3<span class="var">x</span>
-                            <span var="op">+</span> 1)</span> </p>
+                            <span class="var">x</span>(3<span class="var">x</span>
+                            <span class="op">+</span> 1)</span> <span class="comment">← Declare functions</span></p>
                     <p><span class="input">&gt;&gt;</span> <span class="value"><span class="var">a</span> = 1<span
-                                class="op">/</span>6</span></p>
+                                class="op">/</span>6</span> <span class="comment">← Declare variables</span></p>
                     <p><span class="input">&gt;&gt;</span> <span class="value">6<span class="var">ia√</span>(<span
-                                class="var">f</span>'(<span class="var">a</span>))</span>
+                                class="var">f</span>'(<span class="var">a</span>))<span class="comment">← Derivation
+                            </span></span>
                     </p>
                     <p> <span class="value">1.4142135624<span class="var">i</span></span> <span class="op">≈</span>
-                        <span class="var">√</span>2<span class="var">i</span>
+                        <span class="var">√</span>2<span class="var">i <span class="comment">← Complex
+                                numbers</span></span>
                     </p>
                     <p><span class="input">&gt;&gt;</span> <span class="value"><span class="var">∫</span>(0, <span
                                 class="var">π</span>,
                             <span class="var">sin2ix</span>, <span class="var">dx</span>)
                             <span class="op">+</span> <span class="var">e</span><span class="op">^</span>(<span
                                 class="var">πi</span>) <span class="op">/</span> 3
+                            <span class="comment">← Integration</span>
                         </span>
                     </p>
                     <p> <span class="value"><span class="op">-</span>0.3333333333 <span class="op">+</span>
@@ -69,7 +73,8 @@
                                 class="var">i</span></span>
                     </p>
                     <p><span class="input">&gt;&gt;</span> <span class="value"><span class="var">Σ</span>(0, 720, 1<span
-                                class="op">/</span><span class="var">n</span><span class="op">!</span>)</span> </p>
+                                class="op">/</span><span class="var">n</span><span class="op">!</span>)</span> <span
+                            class="comment">← Calculating sums</span></p>
                     <p> <span class="value">2.7182818285 <span class="op">≈</span> <span class="var">e</span></span>
                     </p>
                     </section>
@@ -86,7 +91,9 @@
                 <li>Groups: (), ⌈⌉, ⌋⌊</li>
                 <li>Pre-defined functions and constants</li>
                 <li>User-defined functions and variables</li>
-                <li>Derivation (prime notation) and integration (eg. integral(a, b, x dx)</li>
+                <li>Derivation (prime notation) and integration (eg. integral(a, b, x dx)<br />
+                    The value of an integral is estimated using Simpson's 3/8 rule, <br />
+                    while derivatives are estimated using the symmetric difference quotinent.</li>
                 <li>Complex numbers</li>
                 <li>Understands fairly ambiguous syntax. Eg. 2sinx + 2xy</li>
                 <li>Syntax highlighting</li>
