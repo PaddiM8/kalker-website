@@ -93,7 +93,7 @@
             <h2>Features</h2>
             <ul>
                 <li>Operators: +, -, *, /, !, %</li>
-                <li>Groups: (), ⌈⌉, ⌋⌊</li>
+                <li>Groups: (), ⌈ceil⌉, ⌊floor⌋, [iverson]</li>
                 <li>Pre-defined functions and constants</li>
                 <li>User-defined functions and variables</li>
                 <li>Derivation (prime notation) and integration (eg. integral(a, b, x dx)<br />
@@ -103,6 +103,8 @@
                 <li>Complex numbers</li>
                 <li>Understands fairly ambiguous syntax. Eg. 2sinx + 2xy</li>
                 <li>Syntax highlighting</li>
+                <li>Piecewise functions: <code>f(x) = { f(x + 1) if x <= 1; x otherwise }</code>, pressing enter before
+                    typing the final "}" will make a new line without submitting.</li>
                 <li>Completion for special symbols on tab</li>
                 <li>Sum function</li>
                 <li>Load a file including predefined functions and constants</li>
