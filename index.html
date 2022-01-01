@@ -50,11 +50,11 @@
                             <span class="var">x</span>(3<span class="var">x</span>
                             <span class="op">+</span> 1)</span> <span class="comment">← Declare functions</span>
                     </console-line>
-                    <console-line><span class="input">&gt;&gt;</span> <span class="value"><span class="var">a</span>
-                            = 1<span class="op">/</span>6</span> <span class="comment">← Declare variables</span>
+                    <console-line><span class="input">&gt;&gt;</span> <span class="value"><span class="var">a</span>₁
+                            = 1<span class="op">÷</span>6</span> <span class="comment">← Declare variables</span>
                     </console-line>
                     <console-line><span class="input">&gt;&gt;</span> <span class="value">6<span
-                                class="var">ia√</span>(<span class="var">f</span>'(<span class="var">a</span>))<span
+                                class="var">ia√</span>(<span class="var">f</span>'(<span class="var">a</span>₁))<span
                                 class="comment">← Derivation
                             </span></span>
                     </console-line>
@@ -67,7 +67,7 @@
                             <span class="var">π</span>,
                             <span class="var">sin2ix</span>, <span class="var">dx</span>)
                             <span class="op">+</span> <span class="var">e</span><span class="op">^</span>(<span
-                                class="var">πi</span>) <span class="op">/</span> 3
+                                class="var">πi</span>) <span class="op">÷</span> 3
                             <span class="comment">← Integration</span>
                         </span>
                     </console-line>
@@ -77,7 +77,7 @@
                                 class="var">i</span></span>
                     </console-line>
                     <console-line><span class="input">&gt;&gt;</span> <span class="value"><span class="var">Σ</span>(0,
-                            720, 1<span class="op">/</span><span class="var">n</span><span class="op">!</span>)</span>
+                            720, 1<span class="op">÷</span><span class="var">n</span><span class="op">!</span>)</span>
                         <span class="comment">← Calculating sums</span>
                     </console-line>
                     <console-line> <span class="value">2.7182818285 <span class="op">≈</span>
@@ -105,9 +105,15 @@
                 <li>Syntax highlighting</li>
                 <li>Piecewise functions: <code>f(x) = { f(x + 1) if x <= 1; x otherwise }</code>, pressing enter before
                     typing the final "}" will make a new line without submitting.</li>
+                <li>Different number bases: Either with a format like <code>0b1101</code>, <code>0o5.3</code>,
+                    <code>0xff</code><br />
+                    or a format like <code>1101_2</code>. The latter does not support letters, as they would <br />
+                    be interpreted as variables</li>
                 <li>Completion for special symbols on tab</li>
                 <li>Sum function</li>
-                <li>Load a file including predefined functions and constants</li>
+                <li>Load files that can contain predefined variable and function declarations.<br />
+                    <a href="#files">You can also have automatically loaded files</a>
+                </li>
             </ul>
         </div>
     </section>
@@ -132,6 +138,10 @@
             <p>You can type special symbols (such as √) by typing the normal function or constant name and pressing tab.
             </p>
             <ul>
+                <li><code>*</code> becomes <code>×</code></li>
+                <li><code>/</code> becomes <code>÷</code></li>
+                <li><code>_123</code> becomes <code>₁₂₃</code></li>
+                <li><code>asin, acos, etc.</code> become <code>sin⁻¹(), cos⁻¹(), etc</code></li>
                 <li><code>sqrt</code> becomes <code>√</code></li>
                 <li><code>deg</code> becomes <code>°</code></li>
                 <li><code>pi</code> becomes <code>π</code></li>
@@ -185,7 +195,7 @@
                 <li><code>asin</code>, <code>acos</code>, <code>atan</code>, <code>acot</code>, <code>acosec</code>,
                     <code>asec</code>
                 </li>
-                <li><code>asinh</code>, <code>acosh</code>, <code>atanh</code>, <code>acoth</code>,
+                <li><code>ashin</code>, <code>acosh</code>, <code>atanh</code>, <code>acoth</code>,
                     <code>acosech</code>, <code>asech</code>
                 </li>
                 <li><code>abs</code>, <code>ceil</code> or <code>⌈⌉</code>, <code>floor</code> or <code>⌊⌋</code>,
@@ -199,6 +209,11 @@
                 <li><code>asinh</code>, <code>acosh</code>, <code>atanh</code>, <code>acoth</code>,
                     <code>acosech</code>, <code>asech</code>
                 </li>
+                <li><code>bitcmp</code>, <code>bitand</code>, <code>bitor</code>, <code>bitxor</code>,
+                    <code>bitshift</code>
+                </li>
+                <li><code>comb</code> or <code>nCr</code>, <code>perm</code> or <code>nPr</code></li>
+                <li><code>gcd</code>, <code>lcm</code></li>
                 <li><code>min</code>, <code>max</code>, <code>hypot</code></li>
                 <li><code>log</code> Eg. <code>log(1000, 10)</code> is the same as log<sub>10</sub>(1000)</li>
                 <li><code>root</code> Eg. <code>root(16, 3)</code> is the same as <sup>3</sup>√16</li>
@@ -215,6 +230,23 @@
             <ul><code>e</code> = <code>2.71828182</code></ul>
             <ul><code>tau</code> or <code>τ</code> = <code>6.2831853</code></ul>
             <ul><code>phi</code> or <code>ϕ</code> = <code>1.61803398</code></ul>
+
+            <h4 id="files">Files</h4>
+            <hr>
+            Kalker looks for kalker files in the system config directory.
+            <ul>
+                <li>Linux: <code>~/.config/kalker/</code></li>
+                <li>macOS: <code>~/Library/Application Support/kalker/</code> or
+                    <code>~/Library/Preferences/kalker</code>
+                </li>
+                <li>Windows: <code>%appdata%/kalker/</code></li>
+            </ul>
+
+            If a file with the name <code>default.kalker</code> is found, it will
+            be loaded automatically every time kalker starts. Any other files in
+            this directory with the <code>.kalker</code> extension can be loaded
+            at any time by doing <code>load filename</code> in kalker. Note that
+            the extension should not be included here.
         </div>
     </section>
     <section class="downloads" id="downloads">
