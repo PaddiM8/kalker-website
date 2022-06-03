@@ -9,7 +9,15 @@
     <meta name="author" content="PaddiM8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="DnQqwEBWiou-9sr0nft_ob0dDZ7O-1MnEQ-2fs3Zp5U" />
-    <title>kalker - A flexible calculator that supports variables and functions defined by the user</title>
+
+    <meta property="og:title" content="Kalker - a modern calculator" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://kalker.xyz" />
+    <meta property="og:description"
+        content="Kalker is a calculator that supports user-defined variables, functions, ambiguous syntax, derivation and integration. It runs on Windows, macOS, Linux, Android, and in web browsers (with WebAssembly)." />
+    <meta name="theme-color" content="#212121">
+
+    <title>kalker - A modern calculator that supports variables and functions defined by the user</title>
     <link rel="stylesheet" href="dist/main.css">
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -93,15 +101,18 @@
             <h2>Features</h2>
             <ul>
                 <li>Operators: +, -, *, /, !, %</li>
-                <li>Groups: (), ⌈ceil⌉, ⌊floor⌋, [iverson]</li>
+                <li>Groups: (), [], ⌈ceil⌉, ⌊floor⌋</li>
+                <li><a href="#vectors">Vectors</a>: (x, y, z, ...)</li>
+                <li><a href="#matrices">Matrices</a>: [x, y, z; a, b, c; ...]</li>
                 <li>Pre-defined functions and constants</li>
                 <li>User-defined functions and variables</li>
+                <li>Root finding using Newton's method (eg. x^2 = 64). Note: estimation and limited to one root</li>
                 <li>Derivation (prime notation) and integration (eg. integral(a, b, x dx)<br />
                     The value of an integral is estimated using Simpson's 3/8 rule, <br />
                     while derivatives are estimated using the symmetric difference quotinent (and derivatives of higher
-                    order can be a bit inaccurate as of now).</li>
+                    order can be a bit inaccurate as of now)</li>
                 <li>Complex numbers</li>
-                <li>Understands fairly ambiguous syntax. Eg. 2sinx + 2xy</li>
+                <li>Understands fairly ambiguous syntax (eg. 2sinx + 2xy)</li>
                 <li>Syntax highlighting</li>
                 <li>Piecewise functions: <code>f(x) = { f(x + 1) if x <= 1; x otherwise }</code>, pressing enter before
                     typing the final "}" will make a new line without submitting. Semicolons are only needed when
@@ -112,7 +123,7 @@
                     be interpreted as variables
                 </li>
                 <li>Completion for special symbols on tab</li>
-                <li>Sum function</li>
+                <li>Sum/prod functions</li>
                 <li>Load files that can contain predefined variable and function declarations.<br />
                     <a href="#files">You can also have automatically loaded files</a>
                 </li>
@@ -132,7 +143,10 @@
                 <li><code>%</code> Percent, eg. <code>5%</code> gives <code>0.05</code>, <code>10 + 50%</code> gives
                     <code>15</code>
                 </li>
-                <li><code>%</code> Modulus (remainder), eg. <code>23 % 3</code> gives <code>2</code></li>
+                <li><code>%</code>, <code>mod</code> Modulus (remainder), eg. <code>23 % 3</code> gives <code>2</code>
+                </li>
+                <li><code>true</code>, <code>false</code> Boolean literals</li>
+                <li><code>and</code>, <code>or</code>, <code>not</code></li>
             </ul>
 
             <h4>Completion for special symbols</h4>
@@ -142,12 +156,17 @@
             <ul>
                 <li><code>*</code> becomes <code>×</code></li>
                 <li><code>/</code> becomes <code>÷</code></li>
+                <li><code>and</code> becomes <code>∧</code></li>
+                <li><code>or</code> becomes <code>¬</code></li>
+                <li><code>not</code> becomes <code>∨</code></li>
+                <li><code>[[</code> becomes <code>⟦⟧</code></li>
                 <li><code>_123</code> becomes <code>₁₂₃</code></li>
                 <li><code>asin, acos, etc.</code> become <code>sin⁻¹(), cos⁻¹(), etc</code></li>
                 <li><code>sqrt</code> becomes <code>√</code></li>
                 <li><code>deg</code> becomes <code>°</code></li>
                 <li><code>pi</code> becomes <code>π</code></li>
                 <li><code>sum</code> becomes <code>Σ()</code></li>
+                <li><code>prod</code> becomes <code>∏()</code></li>
                 <li><code>integrate</code> becomes <code>∫()</code></li>
                 <li><code>tau</code> becomes <code>τ</code></li>
                 <li><code>phi</code> becomes <code>ϕ</code></li>
@@ -185,7 +204,7 @@
                 <code>sin'(pi)</code>
             </p>
 
-            <h4>Predefined functions</h4>
+            <h4 class="functions">Predefined functions</h4>
             <hr>
             <ul>
                 <li><code>sin</code>, <code>cos</code>, <code>tan</code>, <code>cot</code>, <code>cosec</code>,
@@ -217,11 +236,15 @@
                 <li><code>comb</code> or <code>nCr</code>, <code>perm</code> or <code>nPr</code></li>
                 <li><code>gcd</code>, <code>lcm</code></li>
                 <li><code>min</code>, <code>max</code>, <code>hypot</code></li>
-                <li><code>log</code> Eg. <code>log(1000, 10)</code> is the same as log<sub>10</sub>(1000)</li>
-                <li><code>root</code> Eg. <code>root(16, 3)</code> is the same as <sup>3</sup>√16</li>
-                <li><code>integrate</code> Eg. <code>integrate(0, pi, sin(x) dx)</code> is the same as <img inline
-                        class="maths" src="public/res/integral.svg" /></li>
-                <li><code>sum</code> Eg. <code>sum(1, 4, 2n)</code> is the same as <img inline class="maths sum"
+                <li><code>log</code> - eg. <code>log(1000, 10)</code> is the same as log<sub>10</sub>(1000)</li>
+                <li><code>root</code> - eg. <code>root(16, 3)</code> is the same as <sup>3</sup>√16</li>
+                <li><code>average</code>, <code>perms</code>, <code>sort</code></li>
+                <li><code>transpose</code></li>
+                <li><code>matrix</code> - takes a vector of vectors and returns a matrix</li>
+                <li><code>integrate</code> - eg. <code>integrate(0, pi, sin(x) dx)</code> is the same as <img inline
+                        class=" maths" src="public/res/integral.svg" />
+                </li>
+                <li><code>sum</code> - eg. <code>sum(n=1, 4, 2n)</code> is the same as <img inline class="maths sum"
                         src="public/res/sum.svg" />
                 </li>
             </ul>
@@ -232,6 +255,49 @@
             <ul><code>e</code> = <code>2.71828182</code></ul>
             <ul><code>tau</code> or <code>τ</code> = <code>6.2831853</code></ul>
             <ul><code>phi</code> or <code>ϕ</code> = <code>1.61803398</code></ul>
+
+            <h4 id="vectors">Vectors</h4>
+            <hr>
+            A vector in kalker is an immutable list of values, defined with the syntax
+            <code>(x, y, z)</code> which may contain an arbitrary amount of items. Generally,
+            when an operation is performed on a vector, it is done on each individual item.
+            This means that <code>(2, 4, 8) / 2</code> gives the result <code>(1, 2, 4)</code>.
+            An exception to this is multiplication with two vectors, for which the result is
+            the dot product of the vectors. When a vector is given to a regular function,
+            the function is applied to all of the items in the vector.
+
+            <h5>Indexing</h5>
+            A specific item can be retrieved from a vector using an indexer, with the
+            syntax <code>vector[[index]]</code>. Indexes start at 1.
+
+            <h5>Vector comprehensions<sup>experimental</sup></h5>
+            Vectors can be created dynamically using vector comprehension notation,
+            which is similar to set-builder notation. The following example creates
+            a vector containing the square of every number between one and nine except five:
+            <code>[n^2 : 0 < n < 10 and n != 5]</code>. A comprehension consists of
+            two parts. The first part defines what should be done to each number,
+            while the second part defines the numbers which should be handled in
+            the first part. At the moment, it is <b>mandatory</b> to begin the
+            second part with a range of the format <code>a < n < b</code> where <code>n</code>
+            defines the variable which should be used in the comprehension.
+            Several of these variables can be created by separating the conditions
+            by a comma, for example <code>[ab : 0 < a < 5, 0 < b < 5]</code>.
+
+            <h4 id="matrices">Matrices</h4>
+            <hr>
+            A matrix is an immutable two-dimensional list of values, defined with the syntax
+            <code>[x, y, z; a, b, c]</code> where semicolons are used to separate rows and
+            commas are used to separate items. It is also possible to press the enter key
+            to create a new row, instead of writing a semicolon. Pressing enter will not
+            submit if there is no closing square bracket. Operations on matrices work the
+            same way as with vectors, except that two matrices multiplied result in matrix
+            multiplication. It is also possible to obtain the tranpose of a matrix with the
+            syntax <code>A^T</code>, where <code>A</code> is a matrix and <code>T</code> is
+            a literal <i>T</i>.
+
+            <h5>Indexing</h5>
+            A specific item can be retrieved from a matrix using an indexer, with the
+            syntax <code>matrix[[rowIndex, columnIndex]]</code>. Indexes start at 1.
 
             <h4 id="files">Files</h4>
             <hr>
