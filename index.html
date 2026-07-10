@@ -19,15 +19,14 @@
     <meta name="theme-color" content="#212121">
 
     <title>kalker - A modern calculator that supports variables and functions defined by the user</title>
-    <link rel="stylesheet" href="dist/main.css">
+    <link rel="stylesheet" href="style/main.sass">
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack-subset.css">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <script async defer data-domain="kalker.xyz" src="stats.js"></script>
-    <script src="dist/bundle.js"></script>
+    <link rel="icon" type="image/png" sizes="32x32" href="res/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="res/favicon-16x16.png">
+    <script src="/dist/bundle.js"></script>
 </head>
 
 <body>
@@ -35,7 +34,7 @@
         <div class="content">
             <header>
                 <div class="logo">
-                    <img inline src="public/res/logo.svg">
+                    <%- logoSvg -%>
                     <h1>kalker</h1>
                 </div>
                 <h3>A scientific calculator that supports math-like syntax with user-defined variables, functions,
@@ -43,11 +42,11 @@
                     and complex numbers.
                 </h3>
                 <a class="button github" href="https://github.com/PaddiM8/kalker" role="button">
-                    <img class="icon" inline src="public/res/github.svg" />
+                    <%- githubSvg -%>
                     <div class="text">GitHub Repo</div>
                 </a>
                 <a class="button to-download" href="#downloads" role="button">
-                    <img class="icon" inline src="public/res/download.svg" />
+                    <%- downloadSvg -%>
                     <div class="text">Download</div>
                 </a>
             </header>
@@ -116,7 +115,7 @@
                 <li>Complex numbers</li>
                 <li>Understands fairly ambiguous syntax (eg. 2sinx + 2xy)</li>
                 <li>Syntax highlighting</li>
-                <li>Piecewise functions: <code>f(x) = { f(x + 1) if x <= 1; x otherwise }</code>, pressing enter before
+                <li>Piecewise functions: <code>f(x) = { f(x + 1) if x &lt;= 1; x otherwise }</code>, pressing enter before
                     typing the final "}" will make a new line without submitting. Semicolons are only needed when
                     writing everything on the same line</li>
                 <li>Different number bases: Either with a format like <code>0b1101</code>, <code>0o5.3</code>,
@@ -246,11 +245,9 @@
                 <li><code>average</code>, <code>perms</code>, <code>sort</code></li>
                 <li><code>transpose</code></li>
                 <li><code>matrix</code> - takes a vector of vectors and returns a matrix</li>
-                <li><code>integrate</code> - eg. <code>integrate(0, pi, sin(x) dx)</code> is the same as <img inline
-                        class=" maths" src="public/res/integral.svg" />
+                <li><code>integrate</code> - eg. <code>integrate(0, pi, sin(x) dx)</code> is the same as <%- integralSvg-%>
                 </li>
-                <li><code>sum</code> - eg. <code>sum(n=1, 4, 2n)</code> is the same as <img inline class="maths sum"
-                        src="public/res/sum.svg" />
+                <li><code>sum</code> - eg. <code>sum(n=1, 4, 2n)</code> is the same as <%- sumSvg -%>
                 </li>
             </ul>
 
@@ -279,14 +276,14 @@
             Vectors can be created dynamically using vector comprehension notation,
             which is similar to set-builder notation. The following example creates
             a vector containing the square of every number between one and nine except five:
-            <code>[n^2 : 0 < n < 10 and n != 5]</code>. A comprehension consists of
+            <code>[n^2 : 0 &lt; n &lt; 10 and n != 5]</code>. A comprehension consists of
             two parts. The first part defines what should be done to each number,
             while the second part defines the numbers which should be handled in
             the first part. At the moment, it is <b>mandatory</b> to begin the
-            second part with a range of the format <code>a < n < b</code> where <code>n</code>
+            second part with a range of the format <code>a &lt; n &lt; b</code> where <code>n</code>
             defines the variable which should be used in the comprehension.
             Several of these variables can be created by separating the conditions
-            by a comma, for example <code>[ab : 0 < a < 5, 0 < b < 5]</code>.
+            by a comma, for example <code>[ab : 0 &lt; a &lt; 5, 0 &lt; b &lt; 5]</code>.
 
             <h4 id="matrices">Matrices</h4>
             <hr>
@@ -329,7 +326,7 @@
             <div class="buttons">
                 <a class="download button"
                     href="https://github.com/PaddiM8/kalker/releases/latest/download/kalker-linux" role="button">
-                    <img inline class="linux" src="public/res/linux.svg" />
+                    <%- linuxSvg -%>
                     <div class="text">
                         <strong>Download</strong>
                         <span>for Linux</span>
@@ -337,7 +334,7 @@
                 </a>
                 <a class="download button"
                     href="https://github.com/PaddiM8/kalker/releases/latest/download/kalker-windows.msi" role="button">
-                    <img inline class="windows" src="public/res/windows.svg" />
+                    <%- windowsSvg -%>
                     <div class="text">
                         <strong>Download</strong>
                         <span>for Windows</span>
@@ -345,7 +342,7 @@
                 </a>
                 <a class="download button"
                     href="https://github.com/PaddiM8/kalker/releases/latest/download/kalker-macOS.zip" role="button">
-                    <img inline class="mac" src="public/res/mac.svg" />
+                    <%- macSvg -%>
                     <div class="text">
                         <strong>Download</strong>
                         <span>for macOS</span>
@@ -353,9 +350,7 @@
                 </a>
             </div>
 
-            <a class="other-download-link"
-                href="https://github.com/PaddiM8/kalker/releases/latest/download/kalker-android.apk">Download for
-                Android</a>
+            <a class="other-download-link" href="https://github.com/PaddiM8/kalker/releases/latest/download/kalker-android.apk">Download for Android</a>
         </div>
     </section>
     <footer>
